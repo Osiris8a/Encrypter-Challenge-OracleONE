@@ -1,0 +1,441 @@
+/* Importando las fuentes a utilizar */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
+
+:root {
+  --color-text: #fffed7;
+  --color-text-secondary: #d0c5fb;
+  --color-bg-btn: #01dc94;
+  --color-bg-btn2: #dcfe54;
+  --color-bg-btn3: #994aff;
+  --color-bg-secondary: #424769;
+  --color-bg-secondary2: #125b68;
+  --color-bg: #1a1a31;
+}
+
+* {
+  /* border: white 1px solid; */
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.body {
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  background-color: var(--color-bg);
+  width: 35vw;
+  height: 75vh;
+  text-align: center;
+  padding-top: 2vh;
+}
+
+.contenedor-formulario {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 2.6vw;
+  color: white;
+}
+
+.bienvenida {
+  font-size: 0.9vw;
+  margin-bottom: 2vh;
+  width: 88%;
+}
+
+.label-input,
+.label-output {
+  font-size: 0.7vw;
+  color: var(--color-text-secondary);
+  padding-left: 0.4vw;
+}
+
+.contenedor-input,
+.contenedor-output {
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  flex-direction: column;
+  padding: 1vh;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.input,
+.output {
+  background-color: var(--color-bg-secondary);
+  font-size: 0.8vw;
+  min-width: 97%;
+  max-width: 97%;
+  min-height: 3vh;
+  max-height: 16vh;
+  margin-top: 1vh;
+  padding: 0.4vw;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+
+.input::placeholder,
+.output::placeholder {
+  color: rgba(204, 199, 199, 0.651);
+}
+
+.contenedor-input:focus-within {
+  outline: 1px solid var(--color-bg-btn);
+}
+
+.output:focus {
+  outline: 1px solid var(--color-bg-btn);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.boton {
+  display: flex;
+  flex: 1 1 0%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-btn3);
+  color: white;
+  font-size: 0.9vw;
+  font-weight: 600;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 0.5px solid white;
+  border-radius: 0.2rem;
+}
+
+.boton-inactive {
+  display: flex;
+  flex: 1 1 0%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(114, 111, 111, 0.462);
+  color: white;
+  font-size: 0.9vw;
+  font-weight: 600;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 0.5px solid white;
+  border-radius: 0.2rem;
+}
+
+.procesar {
+  background-color: var(--color-bg-btn);
+}
+
+.limpiar {
+  background-color: var(--color-bg-btn2);
+  color: var(--color-bg);
+  border-color: var(--color-bg);
+}
+
+.boton:hover {
+  background-color: rgb(255, 255, 255);
+  color: var(--color-bg);
+  outline: 3.5px solid var(--color-bg);
+}
+
+.boton:hover svg path {
+  stroke: var(--color-bg);
+  /* Cambiar por el color deseado */
+}
+
+.checkbox {
+  display: flex;
+  flex: 1 1 0%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--color-bg);
+  padding: 9px 7px 9px 7px;
+  user-select: none;
+}
+
+.checkbox span {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input[type="checkbox"] {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.checkbox:focus-within {
+  outline: 1px solid var(--color-bg-btn2);
+}
+
+.checkbox input[type="checkbox"]:checked + span::after {
+  background-color: var(--color-bg-btn2);
+}
+
+.checkbox input[type="checkbox"]:checked + span {
+  color: var(--color-bg-btn2);
+}
+
+.checkbox input[type="checkbox"]:focus + span::before {
+  border-color: var(--color-bg-btn2);
+}
+
+.checkbox input[type="checkbox"]:disabled {
+  opacity: 0.85;
+}
+
+.checkbox input[type="checkbox"]:disabled + span {
+  color: #9a9a88;
+}
+
+.checkbox span::before {
+  content: "";
+  display: inline-block;
+  border-radius: 3px;
+  background-color: transparent;
+  margin-right: 8px;
+  height: 16px;
+  width: 16px;
+  border: 1.5px solid var(--color-bg-btn);
+}
+
+.checkbox span::after {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 3px;
+  background-color: transparent;
+  left: 3px;
+  position: absolute;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+.corazon {
+  color: red;
+}
+
+.github {
+  color: #c1c1c4;
+}
+
+footer a {
+  color: var(--color-bg-btn);
+  text-decoration: none;
+}
+
+.llave {
+  color: var(--color-bg-btn);
+}
+
+.ingresa-texto {
+  padding-left: 10px;
+  color: rgb(239, 49, 49);
+  font-size: 12px;
+}
+
+.opacity-50 {
+  opacity: 50%;
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 992px) {
+  /* Agrega estilos para elementos específicos en pantallas grandes */
+  .checkbox {
+    font-size: 0.9rem;
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Agrega estilos para elementos específicos en pantallas medianas */
+  .body {
+    width: 100%;
+  }
+
+  .contenedor {
+    width: 90%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 8vw;
+  }
+
+  .contenedor-formulario {
+    width: 90%;
+    height: 80%;
+    padding-bottom: 60vw;
+  }
+
+  .titulo {
+    font-size: 5vw;
+  }
+
+  .bienvenida {
+    font-size: 2.2vw;
+    margin-bottom: 2vw;
+    width: 100%;
+  }
+
+  .label-input,
+  .label-output {
+    font-size: 1.6vw;
+    padding: 0.8vw;
+  }
+
+  .contenedor-input,
+  .contenedor-output {
+    padding: 1vw;
+  }
+
+  .input,
+  .output {
+    font-size: 2vw;
+    max-width: 98%;
+    min-height: 2.8vw;
+    max-height: 20vw;
+  }
+
+  .botones {
+    gap: 0.8rem;
+    margin-top: 3.2vw;
+    margin-bottom: 3.2vw;
+  }
+
+  .boton {
+    font-size: 2.4vw;
+  }
+
+  .checkbox {
+    font-size: 0.9rem;
+  }
+
+  .boton svg {
+    width: 20px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding-left: 1vw;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+  /* Agrega estilos para elementos específicos en pantallas pequeñas */
+  .contenedor {
+    width: 100%;
+    height: 90vh;
+    text-align: center;
+    padding-top: 10vh;
+  }
+
+  .contenedor-formulario {
+    width: 90%;
+  }
+
+  .titulo {
+    font-size: 8vw;
+  }
+
+  .bienvenida {
+    font-size: 3.4vw;
+    margin-bottom: 3vh;
+    width: 100%;
+  }
+
+  .label-input,
+  .label-output {
+    font-size: 2.4vw;
+    color: var(--color-text-secondary);
+    padding-left: 0.4vw;
+  }
+
+  .contenedor-input,
+  .contenedor-output {
+    padding: 1vh;
+  }
+
+  .input,
+  .output {
+    font-size: 2.8vw;
+    min-width: 98%;
+    max-width: 98%;
+    min-height: 7vw;
+    max-height: 20vh;
+  }
+
+  .botones {
+    gap: 0.8rem;
+    margin-top: 3.2vw;
+    margin-bottom: 3.2vw;
+  }
+
+  .boton {
+    font-size: 3.6vw;
+  }
+
+  .checkbox {
+    font-size: 0.6rem;
+  }
+
+  .boton svg {
+    width: 1px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding-left: 1vw;
+  }
+}
